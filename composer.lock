@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "aa322c53454393ed775cfe4807d54a50",
+    "content-hash": "c3be98ae266283893f14cb45b3374e49",
     "packages": [
         {
             "name": "brick/math",
@@ -5291,6 +5291,46 @@
             "time": "2023-01-03T09:29:04+00:00"
         },
         {
+            "name": "unlimited/repository-design-pattern-laravel",
+            "version": "5.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mohamedgouda98/repository-design-pattern-laravel.git",
+                "reference": "778e3314a5f3b38330ad5b2c0be9187bf82528cc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mohamedgouda98/repository-design-pattern-laravel/zipball/778e3314a5f3b38330ad5b2c0be9187bf82528cc",
+                "reference": "778e3314a5f3b38330ad5b2c0be9187bf82528cc",
+                "shasum": ""
+            },
+            "require-dev": {
+                "orchestra/testbench": "^7.8"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Unlimited\\Repository\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "macbookpro",
+                    "email": "dev.mohamedgouda@gmail.com"
+                }
+            ],
+            "description": "repository_pattern",
+            "support": {
+                "issues": "https://github.com/mohamedgouda98/repository-design-pattern-laravel/issues",
+                "source": "https://github.com/mohamedgouda98/repository-design-pattern-laravel/tree/5.2"
+            },
+            "time": "2023-06-04T18:33:49+00:00"
+        },
+        {
             "name": "vlucas/phpdotenv",
             "version": "v5.5.0",
             "source": {
@@ -6495,16 +6535,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "10.2.1",
+            "version": "10.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "599b33294350e8f51163119d5670512f98b0490d"
+                "reference": "1ab521b24b88b88310c40c26c0cc4a94ba40ff95"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/599b33294350e8f51163119d5670512f98b0490d",
-                "reference": "599b33294350e8f51163119d5670512f98b0490d",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/1ab521b24b88b88310c40c26c0cc4a94ba40ff95",
+                "reference": "1ab521b24b88b88310c40c26c0cc4a94ba40ff95",
                 "shasum": ""
             },
             "require": {
@@ -6576,7 +6616,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
                 "security": "https://github.com/sebastianbergmann/phpunit/security/policy",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/10.2.1"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/10.2.2"
             },
             "funding": [
                 {
@@ -6592,7 +6632,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-06-05T05:15:51+00:00"
+            "time": "2023-06-11T06:15:20+00:00"
         },
         {
             "name": "sebastian/cli-parser",
