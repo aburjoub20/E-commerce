@@ -19,9 +19,20 @@
 <script src="{{asset('AdminAssets/plugins/src/mousetrap/mousetrap.min.js')}}"></script>
 <script src="{{asset('AdminAssets/plugins/src/waves/waves.min.js')}}"></script>
 <script src="{{asset('AdminAssets/JS/app.js')}}"></script>
+
 <!-- END GLOBAL MANDATORY SCRIPTS -->
 
 <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
+
+<script src="{{asset('AdminAssets/plugins/src/table/datatable/datatables.js')}}"></script>
+
 <script src="{{asset('AdminAssets/plugins/src/apex/apexcharts.min.js')}}"></script>
 <script src="{{asset('AdminAssets/assets/js/dashboard/dash_1.js')}}"></script>
 <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
+
+<!-- Data Table Package  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+@yield('JS')
+
+
+

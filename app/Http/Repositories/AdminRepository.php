@@ -4,6 +4,8 @@ namespace App\Http\Repositories;
 use App\Models\Admin;
 use App\Http\interfaces\AdminInterface;
 use App\Http\Requests\Admin\AdminCreateRequest;
+use RealRashid\SweetAlert\Facades\Alert;
+
 
 class AdminRepository implements AdminInterface
 {
@@ -11,7 +13,8 @@ class AdminRepository implements AdminInterface
     public function __construct(Admin $admin){
         $this->admin = $admin;
     }
-    public function index(){
+    public function index( $datatable){
+        return $datatable->render('Admin.index');
         return view('index');
     }
     public function create(){
@@ -25,9 +28,16 @@ class AdminRepository implements AdminInterface
              'email'=>$request->email,
              'phone'=>$request->phone,
         ]);
-        return redirect('/');
+        toast('Your Admin user added successfuly','success');
+
+        return redirect(route('admin.create'));
 
     }
+    public function edit($id){
+       $admin= $this->admin::find($id);
+        return ($admin)? view('Admin.edit',compact('admin')): back();
+    }
+
     public function update(){}
     public function delete(){}
 

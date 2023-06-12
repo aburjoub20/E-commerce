@@ -7,6 +7,8 @@
     <link href="{{asset('AdminAssets/css/loader.css')}}" rel="stylesheet" type="text/css" />
 
     <script src="{{asset('AdminAssets/JS/loader.js')}}"></script>
+    @include('sweetalert::alert')
+    <link href="{{ asset('AdminAssets/plugins/src/sweetalerts2/sweetalerts2.css') }}" rel="stylesheet" type="text/css" />
 
     <!-- BEGIN GLOBAL MANDATORY STYLES -->
     <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
@@ -18,6 +20,7 @@
     <link href="{{ asset('AdminAssets/plugins/src/apex/apexcharts.css')}}" rel="stylesheet" type="text/css">
     <link href="{{ asset('AdminAssets/assets/css/light/dashboard/dash_1.css')}}" rel="stylesheet" type="text/css" />
     <!-- END PAGE LEVEL PLUGINS/CUSTOM STYLES -->
+    @yield('css')
 
 </head>
 <body class="layout-boxed">
