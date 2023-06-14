@@ -1,8 +1,9 @@
 @extends('index');
 @section('content')
-<form method="POST" action="{{ route('admin.update') }}">
+
+<form action="{{ route('admin.update') }}" method="POST">
     @method('PUT')
-    <input type="text" name="{{ $admin->id }}"value="{{ $admin->id }}">
-    @include('Admin._form')
+    <input type="hidden" name="id" value="{{ $admin->id }}">
+        @include('Admin._form')
    </form>
 @endsection

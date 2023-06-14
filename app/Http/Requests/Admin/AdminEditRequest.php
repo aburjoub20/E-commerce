@@ -1,7 +1,6 @@
 <?php
 
-namespace App\Http\Requests;
-
+namespace App\Http\Requests\Admin;
 use Illuminate\Foundation\Http\FormRequest;
 
 class AdminEditRequest extends FormRequest
@@ -22,11 +21,11 @@ class AdminEditRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name'=>'required',
-            'email'=>'required|unique:admins,email',
-            'phone'=>'required|unique:admins,phone',
-            'password'=>'required',
-            'id'=>'required|exists:admins,id'
+            // 'name'=>'required',
+            // 'email'=>'required|unique:admins,email',
+            // 'phone'=>'required|unique:admins,phone',
+            // 'password'=>'required',
+            // 'id'=>'required|exists:admins,id'
         ];
     }
 }

@@ -6,6 +6,8 @@ use App\Models\Admin;
 use Illuminate\Http\Request;
 use App\DataTables\AdminDataTable;
 use App\Http\Interfaces\AdminInterface;
+use App\Http\Requests\AdminDeleteRequest;
+use App\Http\Requests\Admin\AdminEditRequest;
 
 class AdminController extends Controller
 {
@@ -37,12 +39,12 @@ class AdminController extends Controller
 
     }
     
-    public function update(){
-        return $this->adminInterface->update();
+    public function update(AdminEditRequest $request){
+        return $this->adminInterface->update($request);
 
     }
-    public function delete(){
-        return $this->adminInterface->delete();
+    public function delete(AdminDeleteRequest $request){
+        return $this->adminInterface->delete($request);
 
     }
 }

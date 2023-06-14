@@ -19,11 +19,14 @@ Route::get('/', function () {
 });
 
 Route::group(['prefix' => 'admin', 'as'=>'admin.'], function() {
+
+
     Route::get('/index',[AdminController::class,'index'])->name('index');
     Route::get('/create',[AdminController::class,'create'])->name('create');
     Route::post('/store',[AdminController::class,'store'])->name('store');
     Route::get('/edit/{id}',[AdminController::class,'edit'])->name('edit');
-    Route::post('/update',[AdminController::class,'update'])->name('update');
+    Route::put('/update',[AdminController::class,'update'])
+    ->name('update');
 
     Route::get('/delete',[AdminController::class,'delete'])->name('delete');
     

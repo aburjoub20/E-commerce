@@ -8,6 +8,8 @@
 
     <script src="{{asset('AdminAssets/JS/loader.js')}}"></script>
     @include('sweetalert::alert')
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert2/11.7.12/sweetalert2.min.css" integrity="sha512-yX1R8uWi11xPfY7HDg7rkLL/9F1jq8Hyiz8qF4DV2nedX4IVl7ruR2+h3TFceHIcT5Oq7ooKi09UZbI39B7ylw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
     <link href="{{ asset('AdminAssets/plugins/src/sweetalerts2/sweetalerts2.css') }}" rel="stylesheet" type="text/css" />
 
     <!-- BEGIN GLOBAL MANDATORY STYLES -->

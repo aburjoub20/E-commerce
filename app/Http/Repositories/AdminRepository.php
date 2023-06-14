@@ -38,7 +38,36 @@ class AdminRepository implements AdminInterface
         return ($admin)? view('Admin.edit',compact('admin')): back();
     }
 
-    public function update(){}
-    public function delete(){}
+    public function update( $request)
+    {      
+        $admin = Admin::findOrFail($request->id);
+        $admin->update([
+            'name' => $request->name,
+            'password' => $request->password,
+            'email' => $request->email,
+            'phone' => $request->phone,
+        ]); 
+        toast('Your Admin user modified successfully', 'success');
+        return redirect()->route('admin.index');
+
+    }
+    
+    public function delete($request){
+        $admin=$this->admin::findOrFail($request->id)->delete();
+        if($admin){
+            return response()->json([
+                'message'=>'success',
+                'id'=>$request->id,
+            ]);
+
+            return response()->json([
+                'message'=>'faild',
+                'id'=>$request->id,
+            ]);
+            
+
+        }
+
+    }
 
 }
