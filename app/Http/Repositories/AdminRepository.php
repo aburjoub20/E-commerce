@@ -23,7 +23,7 @@ class AdminRepository implements AdminInterface
     public function store( $request ){
         // dd($request);
         $this->admin::create([
-            'name'=>$request->name,
+            'name'=>['ar'=>$request->name_ar,'en'=>$request->name_en],
             'password'=>$request->password,
              'email'=>$request->email,
              'phone'=>$request->phone,

@@ -22,7 +22,8 @@ class AdminCreateRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name'=>'required',
+            'name_ar'=>'required',
+            'name_en'=>'required',
             'email'=>'required|unique:admins,email',
             'phone'=>'required|unique:admins,phone',
             'password'=>'required',

@@ -10,7 +10,9 @@
         "laravel/framework": "^10.10",
         "laravel/sanctum": "^3.2",
         "laravel/tinker": "^2.8",
+        "mcamara/laravel-localization": "^1.8",
         "realrashid/sweet-alert": "^7.0",
+        "spatie/laravel-translatable": "^6.5",
         "unlimited/repository-design-pattern-laravel": "^5.2",
         "yajra/laravel-datatables": "10.0",
         "yajra/laravel-datatables-oracle": "10.3.1"

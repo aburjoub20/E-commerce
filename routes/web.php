@@ -18,6 +18,8 @@ Route::get('/', function () {
     return view('index');
 });
 
+
+Route::group(['prefix' => LaravelLocalization::setLocale()], function(){
 Route::group(['prefix' => 'admin', 'as'=>'admin.'], function() {
 
 
@@ -30,5 +32,6 @@ Route::group(['prefix' => 'admin', 'as'=>'admin.'], function() {
 
     Route::get('/delete',[AdminController::class,'delete'])->name('delete');
     
+});
 });
 

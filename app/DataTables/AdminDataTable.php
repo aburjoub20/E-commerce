@@ -63,8 +63,9 @@ class AdminDataTable extends DataTable
     {
         return [
             Column::make('id'),
-            Column::make('email'),
-            Column::make('name'),
+            Column::make('email')->title(trans('trans.Dashboard')),
+            Column::make('name')->data('name.ar')->title('Arabic'),
+            Column::make('name')->data('name.en')->title('English'),
             Column::make('status')
                 ->title('Status')
                 // ->render(null)
