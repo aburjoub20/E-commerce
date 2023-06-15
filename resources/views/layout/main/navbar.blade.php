@@ -30,11 +30,16 @@
                     <img src="{{asset('AdminAssets/assets/img/1x1/us.svg')}}" class="flag-width" alt="flag">
                 </a>
                 <div class="dropdown-menu position-absolute" aria-labelledby="language-dropdown">
-                    <a class="dropdown-item d-flex" href="javascript:void(0);"><img src="{{asset('AdminAssets/assets/img/1x1/us.svg')}}" class="flag-width" alt="flag"> <span class="align-self-center">&nbsp;English</span></a>
-                    <a class="dropdown-item d-flex" href="javascript:void(0);"><img src="{{asset('AdminAssets/assets/img/1x1/tr.svg')}}" class="flag-width" alt="flag"> <span class="align-self-center">&nbsp;Turkish</span></a>
-                    <a class="dropdown-item d-flex" href="javascript:void(0);"><img src="{{asset('AdminAssets/assets/img/1x1/br.svg')}}" class="flag-width" alt="flag"> <span class="align-self-center">&nbsp;Portuguese</span></a>
-                    <a class="dropdown-item d-flex" href="javascript:void(0);"><img src="{{asset('AdminAssets/assets/img/1x1/in.svg')}}" class="flag-width" alt="flag"> <span class="align-self-center">&nbsp;Hindi</span></a>
-                    <a class="dropdown-item d-flex" href="javascript:void(0);"><img src="{{asset('AdminAssets/assets/img/1x1/de.svg')}}" class="flag-width" alt="flag"> <span class="align-self-center">&nbsp;German</span></a>
+                    <a href="{{ LaravelLocalization::getLocalizedURL('en') }}" class="dropdown-item d-flex" href="javascript:void(0);">
+                        <img src="{{ asset('AdminAssets/assets/img/1x1/us.svg') }}" class="flag-width" alt="flag">
+                        <span class="align-self-center">&nbsp;English</span>
+                      </a>
+                      
+                      <a href="{{ LaravelLocalization::getLocalizedURL('ar') }}" class="dropdown-item d-flex" href="javascript:void(0);">
+                        <img src="{{ asset('AdminAssets/assets/img/1x1/palestine.png') }}" class="flag-width" alt="flag">
+                        <span class="align-self-center">&nbsp;Arabic</span>
+                      </a>
+                      
                 </div>
             </li>
 

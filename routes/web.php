@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,21 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('index');
 });
+
+
+Route::group(['prefix' => LaravelLocalization::setLocale()], function(){
+Route::group(['prefix' => 'admin', 'as'=>'admin.'], function() {
+
+
+    Route::get('/index',[AdminController::class,'index'])->name('index');
+    Route::get('/create',[AdminController::class,'create'])->name('create');
+    Route::post('/store',[AdminController::class,'store'])->name('store');
+    Route::get('/edit/{id}',[AdminController::class,'edit'])->name('edit');
+    Route::put('/update',[AdminController::class,'update'])
+    ->name('update');
+
+    Route::get('/delete',[AdminController::class,'delete'])->name('delete');
+    
+});
+});
+

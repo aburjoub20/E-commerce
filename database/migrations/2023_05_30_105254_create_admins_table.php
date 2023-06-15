@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->string('name');
+            $table->string('password');
             $table->string('email');
             $table->string('phone');
            $table->enum('status',['active','not_active']);
