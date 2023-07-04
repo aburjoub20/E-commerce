@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\BlogCategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,10 +28,19 @@ Route::group(['prefix' => 'admin', 'as'=>'admin.'], function() {
     Route::get('/create',[AdminController::class,'create'])->name('create');
     Route::post('/store',[AdminController::class,'store'])->name('store');
     Route::get('/edit/{id}',[AdminController::class,'edit'])->name('edit');
-    Route::put('/update',[AdminController::class,'update'])
-    ->name('update');
-
+    Route::put('/update',[AdminController::class,'update'])->name('update');
     Route::get('/delete',[AdminController::class,'delete'])->name('delete');
+    
+});
+
+Route::group(['prefix' => 'BlogCategroy', 'as'=>'BlogCategory.'], function() {
+
+    Route::get('/index',[BlogCategoryController::class,'index'])->name('index');
+    Route::get('/create',[BlogCategoryController::class,'create'])->name('create');
+    Route::post('/store',[BlogCategoryController::class,'store'])->name('store');
+    Route::get('/edit/{id}',[BlogCategoryController::class,'edit'])->name('edit');
+    Route::put('/update',[BlogCategoryController::class,'update'])->name('update');
+    Route::get('/delete',[BlogCategoryController::class,'delete'])->name('delete');
     
 });
 });

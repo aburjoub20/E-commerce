@@ -35,3 +35,43 @@ function deleteconfirm(id) {
         }
     });
 }
+
+
+
+function deleteconfirmBlogCategory(id) {
+    Swal.fire({
+        title: 'Are you sure?',
+        text: "You won't be able to revert this!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, delete it!'
+    }).then((result) => {
+        if (result) {
+            $.ajax({
+                url:'/BlogCategroy/delete',
+                METHOD:'DELETE',
+                data:{'id':id},
+                success:function(data){
+                    console.log(data);
+                    if(data.message=='success'){
+                        $("#"+id).remove();
+                        Swal.fire(
+                            'Deleted!','This BlogCategory Deleted successfuly',
+                            'success'
+                        )
+                    }
+                },
+                error:function(){
+                    Swal.fire(
+                        'error!','This BlogCategory was not found ',
+                        'error'
+                    )
+
+
+                }
+            })
+        }
+    });
+}
